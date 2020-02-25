@@ -47,6 +47,9 @@ public class DataLoader implements ApplicationRunner {
         File file3 = new File("notes", "doc", 4, folder2);
         fileRepository.save(file3);
 
+        File file4 = new File("cv", "pdf", 10, folder2);
+        fileRepository.save(file4);
+
         user1.addFolder(folder1);
         user1.addFolder(folder2);
         userRepository.save(user1);
@@ -54,12 +57,9 @@ public class DataLoader implements ApplicationRunner {
         folder1.addFile(file1);
         folder1.addFile(file2);
         folder2.addFile(file3);
+        folder2.addFile(file4);
         folderRepository.save(folder1);
         folderRepository.save(folder2);
-
-
-
-
 
     }
 
