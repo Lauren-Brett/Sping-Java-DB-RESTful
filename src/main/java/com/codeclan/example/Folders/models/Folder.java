@@ -28,14 +28,14 @@ public class Folder {
     private User user;
 
 
-    public Folder(String title, User user){
+    public Folder(String title, User user) {
         this.title = title;
         this.files = new ArrayList<>();
         this.user = user;
 
     }
 
-    public Folder(){
+    public Folder() {
 
     }
 
@@ -69,5 +69,9 @@ public class Folder {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public void addFile(File file){
+        this.files.add(file);
     }
 }

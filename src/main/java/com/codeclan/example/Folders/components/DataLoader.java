@@ -35,7 +35,30 @@ public class DataLoader implements ApplicationRunner {
         Folder folder1 = new Folder("Codeclan", user1);
         folderRepository.save(folder1);
 
+        Folder folder2 = new Folder("Life Admin", user1);
+        folderRepository.save(folder2);
+
         File file1 = new File("code", "xml", 6, folder1);
+        fileRepository.save(file1);
+
+        File file2 = new File("test", "html", 8, folder1);
+        fileRepository.save(file2);
+
+        File file3 = new File("notes", "doc", 4, folder2);
+        fileRepository.save(file3);
+
+        user1.addFolder(folder1);
+        user1.addFolder(folder2);
+        userRepository.save(user1);
+
+        folder1.addFile(file1);
+        folder1.addFile(file2);
+        folder2.addFile(file3);
+        folderRepository.save(folder1);
+        folderRepository.save(folder2);
+
+
+
 
 
     }
